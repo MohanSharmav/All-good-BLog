@@ -1,0 +1,5 @@
+package webapp.Dao;
+
+public interface EmployeeRep {
+
+}
