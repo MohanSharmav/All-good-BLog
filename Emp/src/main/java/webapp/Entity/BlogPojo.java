@@ -7,48 +7,63 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
+
 @Entity
-@Table(name = "product")
-public class employee {
+@Table( name = "Blo")
+public class BlogPojo {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+	private String Title;
 	
-	@Column(name = "name")
-	private String name;
+	@Column(name = "TextBody")
+	private String TextBody; 
 	
-	@Column(name = "image_url")
-	private String img;
+	@Column(name = "Catergory")
+	private String Catergory;
 	
-	@Column(name = "category_id")
-	private String C_id;
+public BlogPojo()
+{
 	
-	public String getName() {
-		return name;
+}
+
+public BlogPojo(String Title,String TextBody,String Catergory)
+{
+super();
+this.Title=Title;
+this.Catergory=Catergory;
+this.TextBody=TextBody;
+}
+
+
+	public String getTitle() {
+		return Title;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setTitle(String title) {
+		Title = title;
 	}
-	public Long getId() {
-		return id;
+
+	public String getTextBody() {
+		return TextBody;
 	}
-	public void setId(Long id) {
-		this.id = id;
+
+	public void setTextBody(String textBody) {
+		TextBody = textBody;
 	}
-	public String getImg() {
-		return img;
+
+	public String getCatergory() {
+		return Catergory;
 	}
-	public void setImg(String img) {
-		this.img = img;
+
+	public void setCatergory(String catergory) {
+		Catergory = catergory;
 	}
-	public String getC_id() {
-		return C_id;
+
+	@Override
+	public String toString() {
+		return "BlogPojo [Title=" + Title + ", TextBody=" + TextBody + ", Catergory=" + Catergory + "]";
 	}
-	public void setC_id(String c_id) {
-		C_id = c_id;
-	}
-	
 	
 }

@@ -11,13 +11,13 @@
             <tr>
 <!--                <th>Id</th>-->
                 <th>Name</th>
-                <th>ImgUrl</th>
+                <th>Nothing</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="project : ${employee}">
-                <td align="center" th:text=${project.name}></td>
-                <td align="center" th:text=${project.img}></td>
+            <tr th:each="blogPojo : ${BlogPojo}">
+                <td align="center" th:text=${blogPojo.Title}></td>
+                <td align="center" th:text=${blogPojo.TextBody}></td>
 <!--                <td align="center" th:text=${pt.sku}></td>-->
             </tr>
             </tbody>
