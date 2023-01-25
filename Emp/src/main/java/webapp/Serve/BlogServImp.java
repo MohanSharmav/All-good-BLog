@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.stereotype.Service;
 
 import webapp.Dao.BlogRep;
@@ -15,12 +16,35 @@ public class BlogServImp implements BlogServe {
 	
 	@Autowired
 	private BlogRep blogRep;
-
-	@Override
-	public List<BlogPojo> findByTitle(String Title) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public BlogServImp(BlogRep blogRep)
+	{
+		super();
+		//this.blogRep=";
 	}
+	@Override
+	public List<BlogPojo> getAllBlogs1() {
+		// TODO Auto-generated method stu
+		
+		return blogRep.findAll();
+	}
+//
+//	@Override
+//	public List<BlogPojo> getAllBlogs() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//	@Override
+//	public List<BlogPojo> getAllBlogs() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
+//	@Override
+//	public List<BlogPojo> getAllBlogs() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 //	@Override
 //	public List<BlogPojo> getAllBlogs() {	

@@ -10,11 +10,16 @@ import jakarta.persistence.Table;
 
 
 @Entity
-@Table( name = "Blo")
+@Table( name = "tiger")
 public class BlogPojo {
 	
+	
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
+    @Column(nullable = false)
+    private Long id;
+	
+	@Column(name="Title")
 	private String Title;
 	
 	@Column(name = "TextBody")
@@ -22,20 +27,14 @@ public class BlogPojo {
 	
 	@Column(name = "Catergory")
 	private String Catergory;
-	
-public BlogPojo()
-{
-	
-}
 
-public BlogPojo(String Title,String TextBody,String Catergory)
-{
-super();
-this.Title=Title;
-this.Catergory=Catergory;
-this.TextBody=TextBody;
-}
+	public Long getId() {
+		return id;
+	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getTitle() {
 		return Title;
@@ -60,10 +59,49 @@ this.TextBody=TextBody;
 	public void setCatergory(String catergory) {
 		Catergory = catergory;
 	}
+	
+//public BlogPojo()
+//{
+//	
+//}
+//
+//public BlogPojo(String Title,String TextBody,String Catergory)
+//{
+//super();
+//this.Title=Title;
+//this.Catergory=Catergory;
+//this.TextBody=TextBody;
+//}
 
-	@Override
-	public String toString() {
-		return "BlogPojo [Title=" + Title + ", TextBody=" + TextBody + ", Catergory=" + Catergory + "]";
-	}
+
+//	public String getTitle() {
+//		return Title;
+//	}
+//
+//	public void setTitle(String title) {
+//		Title = title;
+//	}
+//
+//	public String getTextBody() {
+//		return TextBody;
+//	}
+//
+//	public void setTextBody(String textBody) {
+//		TextBody = textBody;
+//	}
+//
+//	public String getCatergory() {
+//		return Catergory;
+//	}
+//
+//	public void setCatergory(String catergory) {
+//		Catergory = catergory;
+//	}
+//
+//	@Override
+//	public String toString() {
+//		return "BlogPojo [Title=" + Title + ", TextBody=" + TextBody + ", Catergory=" + Catergory + "]";
+//	}
+//	
 	
 }
