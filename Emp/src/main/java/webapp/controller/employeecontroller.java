@@ -1,5 +1,8 @@
 package webapp.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,20 +17,21 @@ import webapp.Serve.BlogServe;
 public class employeecontroller {
 	@Autowired
 	private BlogServe blogserve;
+	List<BlogServe> list = new ArrayList<>();
 //
 //	@Autowired
 //	private BlogPojo blogPojo;
 	
 	@GetMapping("/")
 	public String viewHomePage(Model model) {
-		System.out.print("⭐⭐⭐⭐⭐⭐");
+		//System.out.print("⭐⭐⭐⭐⭐⭐");
 	//	console.log("ADSSD");
 		
-//		BlogPojo b=new BlogPojo();
-//		System.out.print(b.toString());
-//		System.out.print(blogserve.toString());
+		//BlogPojo blogPojo();
+		//System.out.print(blogPojo.toString());
+	//System.out.print("----->"+blogserve.getAllBlogs1());
 		
-		model.addAttribute("Blog", blogserve.getAllBlogs1());
+		model.addAttribute("benny", blogserve.getAllBlogs1());
 		
 		return "index";
 	}

@@ -28,7 +28,14 @@ public class BlogPojo {
 	@Column(name = "Catergory")
 	private String Catergory;
 
+	@Override
+	public String toString() {
+		return "BlogPojo [id=" + id + ", Title=" + Title + ", TextBody=" + TextBody + ", Catergory=" + Catergory + "]";
+	}
+
 	public Long getId() {
+		System.out.print("⭐⭐⭐⭐⭐⭐");
+		System.out.print(id);
 		return id;
 	}
 

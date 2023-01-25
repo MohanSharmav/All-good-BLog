@@ -25,7 +25,7 @@ public class BlogServImp implements BlogServe {
 	@Override
 	public List<BlogPojo> getAllBlogs1() {
 		// TODO Auto-generated method stu
-		
+		System.out.print( blogRep.findAll());
 		return blogRep.findAll();
 	}
 //
